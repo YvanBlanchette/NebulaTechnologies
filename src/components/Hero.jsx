@@ -12,7 +12,7 @@ const Hero = () => {
 			</div>
 			<div className="col-span-12 md:col-span-6 pointer-events-none">
 				<video autoPlay loop muted>
-					<source src="/assets/videos/hero.mp4" type="video/mp4" />
+					<source src="/assets/videos/hero.webm" type="video/webm" />
 				</video>
 			</div>
 		</div>

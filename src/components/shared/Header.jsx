@@ -13,7 +13,7 @@ const Header = () => {
 
 	return (
 		<header className="w-full h-[185px] bg-white dark:bg-[#000000]">
-			<div className="px-[5vw] py-[3vw] mx-auto flex justify-between items-center">
+			<div className="px-[5vw] py-[3vw] mx-auto flex justify-between gap-10 items-center">
 				<Link to="/" className={`relative transition-opacity duration-500 ${isOpen ? "opacity-0 pointer-events-none" : "opacity-1 pointer-events-auto"}`}>
 					<img src="/assets/images/nebula_logo.svg" alt="Logo de Nebula Technologies" className="h-[90px]" />
 					<img src="/assets/images/nebula_logo.svg" alt="Logo de Nebula Technologies" className="absolute top-0 h-[90px] hover:animate-slow-ping" />
