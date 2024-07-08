@@ -6,16 +6,16 @@ export const links = [
     path: "/",
   },
   {
-    name: "Page 02",
-    path: "/page02",
+    name: "Services",
+    path: "/services",
   },
   {
-    name: "Page 03",
-    path: "/page03",
+    name: "À Propos",
+    path: "/a-propos",
   },
   {
-    name: "Page 04",
-    path: "/page04",
+    name: "Nous Joindre",
+    path: "/nous-joindre",
   },
 ];
 

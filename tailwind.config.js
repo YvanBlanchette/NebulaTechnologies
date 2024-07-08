@@ -17,6 +17,7 @@ module.exports = {
       },
     },
     extend: {
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -68,10 +69,14 @@ module.exports = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        'spin-slow': 'spin 5s linear infinite',
+        'slow-ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) forwards',
       },
+      keyframes: {
+        ping: {
+          '75%, 100%': { transform: 'scale(2)', opacity: '0' },
+        },
+      }
+
     },
   },
   plugins: [require("tailwindcss-animate")],

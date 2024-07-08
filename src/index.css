@@ -36,7 +36,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 255 100% 0%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -82,6 +82,70 @@ body {
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
+}
+
+
+/* COMPONENTS */
+.openMenu__lines {
+  background: #e2e8f0;
+  display: block;
+  height: 1px;
+  position: relative;
+  top: 0px;
+  width: 30px;
+
+  &:after,
+  &:before {
+    background: #e2e8f0;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: top 0.3s, transform 0.4s, opacity 0.3s;
+    width: 100%;
+  }
+
+  &:before {
+    top: -8px;
+  }
+
+  &:after {
+    top: 8px;
+  }
+}
+
+.opened .openMenu__lines {
+  background: transparent;
+  /* Hide the original line by making it transparent */
+}
+
+.opened .openMenu__lines:before,
+.opened .openMenu__lines:after {
+  top: 0;
+  transform-origin: 50% 50%;
+  transition: all 0.4s ease-out;
+}
+
+.opened .openMenu__lines:before {
+  transform: rotate(45deg);
+}
+
+.opened .openMenu__lines:after {
+  transform: rotate(-45deg);
+}
+
+.text-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#6f00ff] to-[#E000EF]
+}
+
+.hover-text-gradient {
+  @apply hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#6f00ff] hover:to-[#E000EF]
+}
+
+.btn-long {
+  @apply h-[65px] text-slate-200 border-2 border-[#6f00ff] hover:bg-[#E000EF] hover:border-[#E000EF] px-8 py-4 text-lg rounded-full transition-all duration-300 font-semibold tracking-widest;
 }
 
 /* UTILITIES */

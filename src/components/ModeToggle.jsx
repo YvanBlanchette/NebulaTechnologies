@@ -4,19 +4,19 @@ import { Button } from "../components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../components/ui/dropdown-menu";
 import { useTheme } from "./providers/ThemeProvider";
 
-export function ModeToggle() {
+export function ModeToggle({ className, iconsClassName }) {
 	const { setTheme, theme } = useTheme();
 
 	return (
 		<>
 			{theme === "dark" ? (
-				<Button onClick={() => setTheme("light")} variant="ghost" size="icon" className="group">
-					<Sun className="h-[1.75rem] w-[1.75rem] group-hover:text-[#9B5FFE] transition-all duration-300" />
+				<Button onClick={() => setTheme("light")} variant="plain" size="icon" className={`group ${className ? className : ""}`}>
+					<Sun className={`size-[250px] group-hover:text-[#9B5FFE] transition-all duration-300 ${iconsClassName ? iconsClassName : ""}`} />
 					<span className="sr-only">Toggle theme</span>
 				</Button>
 			) : (
-				<Button onClick={() => setTheme("dark")} variant="ghost" size="icon" className="group">
-					<Moon className="h-[1.75rem] w-[1.75rem] text-black group-hover:text-[#9B5FFE] transition-all duration-300" />
+				<Button onClick={() => setTheme("dark")} variant="plain" size="icon" className={`group ${className ? className : ""}`}>
+					<Moon className={`size-[150px] text-black group-hover:text-[#9B5FFE] transition-all duration-300 ${iconsClassName ? iconsClassName : ""}`} />
 					<span className="sr-only">Toggle theme</span>
 				</Button>
 			)}
